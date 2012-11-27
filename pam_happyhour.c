@@ -18,9 +18,8 @@ PAM_EXTERN int pam_sm_authenticate (pam_handle_t *pamh, int flags,
     hour = time_local->tm_hour;
 
     if (hour == 17)
-    {
-
-    char *args[] = { "** It's happy hour!! **", NULL };
+    {             
+        char *args[] = { "** It's happy hour!! **", NULL };
 
         sigset_t zzz;                               //  fix for 'login'  
         sigemptyset (&zzz);                        //     |      |   
